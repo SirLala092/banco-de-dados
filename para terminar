@@ -1,0 +1,40 @@
+create table piloto(
+id serial primary key ,
+nome varchar (100),
+nacionalidade varchar (20),
+data de nascimento date,
+numero_carro int
+);
+
+create table equipe(
+id serial primary key,
+nome varchar (100),
+pais_sede  varchar (100)
+);
+
+create table carro (
+id serial primary key,
+modelo varchar (100),
+motor varchar (100),
+fk_id_equipe int
+);
+
+create table corrida (
+id serial primary key,
+nome varchar (100),
+data date,
+local varchar (100)
+
+);
+
+create table temporada (
+id serail primary key,
+ano varchar (10)
+);
+
+create table resultado (
+id serial primary key,
+posicao varchar (100),
+fk_id_corrida int,
+fk_id_piloto int
+);
